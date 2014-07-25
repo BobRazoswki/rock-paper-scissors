@@ -9,6 +9,7 @@ require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
+=begin
 module WithinHelpers
   def with_scope(locator)
     locator ? within(locator) { yield } : yield
@@ -217,3 +218,4 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+=end
