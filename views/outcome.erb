@@ -1,10 +1,11 @@
 RESULTS:
-<% if @game.winner == "Draw" %>
+
+<% if GAME.winner == "Draw" %>
  <h1> it was a draw </h1>
- <% elsif @game.winner.name == "computer" %>
- <h1> You lost, the compute won with <%= @game.winner.pick %></h1>
-<% else %>
-<h1> You won, with <%= @game.winner.pick %> </h1>
+ <% elsif GAME.winner == GAME.playe %>
+ <h1> You lost, the compute won with <%= GAME.winner.pick %></h1>
+	<% else %>
+	<h1> You won, with <%= GAME.winner.pick %> </h1>
 <%end%>
 
 

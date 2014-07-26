@@ -13,7 +13,7 @@ end
 
 Given(/^I've registered to play$/) do
   visit '/new-game'
-  click_button "Play!"
+  click_button "Submit"
 end
 
 When(/^I choose Paper$/) do
@@ -25,10 +25,14 @@ Given(/^I am on the homepage$/) do
 end
 
 When(/^I press "(.*?)"$/) do |arg1|
-  click_button('Play!')
+  click_button('Submit')
 end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
 page.should have_content('RESULTS:')
+end
+
+Then(/^I am on the waiting_room$/) do
+  page.should have_content("WAITING")
 end
 
