@@ -3,8 +3,8 @@ RESULTS:
 <% if GAME.winner == "Draw" %>
  <h1> it was a draw </h1>
  <% elsif GAME.winner.name == GAME.player1.name %>
- <h1> You lost, the compute won with <%= GAME.winner.pick %></h1>
+ <h1> <%= GAME.winner.name %> won with <%= GAME.winner.pick %> and <%= GAME.looser.name %> lost with <%= GAME.looser.pick %></h1>
 <% else %>
-<h1> You won, with <%= GAME.winner.pick %> </h1>
-<%end%>
+ <h1> <%= GAME.winner.name %> won with <%= GAME.winner.pick %> and <%= GAME.looser.name %> lost with <%= GAME.looser.pick %></h1><%end%>
+
 
