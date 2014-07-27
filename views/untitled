@@ -12,6 +12,21 @@ height: 1px;
 	background-image: -ms-linear-gradient(left, #ccc, #50658e, #ccc);
 	background-image: -o-linear-gradient(left, #ccc, #50658e, #ccc);
 
+
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.46, #68B3E6),
+	color-stop(1, #54A4DE)
+);
+background-image: -o-linear-gradient(bottom, #68B3E6 46%, #54A4DE 100%);
+background-image: -moz-linear-gradient(bottom, #68B3E6 46%, #54A4DE 100%);
+background-image: -webkit-linear-gradient(bottom, #68B3E6 46%, #54A4DE 100%);
+background-image: -ms-linear-gradient(bottom, #68B3E6 46%, #54A4DE 100%);
+background-image: linear-gradient(to bottom, #68B3E6 46%, #54A4DE 100%);
+
+
 class Game 
 
 	def initialize
