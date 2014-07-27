@@ -9,6 +9,12 @@ use Rack::Session::Cookie, :key => 'rack.session',
                            :expire_after => 2592000, # In seconds
                            :secret => 'change_me'
 
+set :public_folder, Proc.new { File.join(root, "public") }
+
+configure :production do
+    require 'newrelic_rpm'
+  end
+  
 GAME = Game.new
   
   get '/' do

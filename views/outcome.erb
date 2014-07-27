@@ -2,10 +2,15 @@ RESULTS:
 
 <% if GAME.winner == "Draw" %>
  <h1> it was a draw </h1>
- <% elsif GAME.winner == GAME.player1 %>
- <h1> You lost, the compute won with <%= GAME.winner.pick %></h1>
-	<% else %>
-	<h1> You won, with <%= GAME.winner.pick %> </h1>
-<%end%>
+ <%end%>
+
+ <% if GAME.winner == GAME.player1 %>
+ <h1> it was a draw </h1>
+ <%end%>
+
+ <% if GAME.winner == GAME.player1 %>
+ <h1> it was a draw </h1>
+ <%end%>
+
 
 
