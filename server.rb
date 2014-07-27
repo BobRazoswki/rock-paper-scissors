@@ -57,7 +57,7 @@ GAME = Game.new
     
     redirect to '/waiting_room' if !GAME.enough_players?
     redirect to '/play' if GAME.enough_players? && !player1.has_picked?
-    redirect to '/waiting_room' if GAME.waiting_for?(GAME.player2) 
+    redirect to '/waiting_room' if GAME.waiting_for?(GAME.player1) 
     redirect to '/outcome' if GAME.both_picked?
     
     # redirect to '/outcome' if GAME.both_picked?
