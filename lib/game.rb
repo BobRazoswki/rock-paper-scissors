@@ -52,7 +52,7 @@ class Game
 	end
 
 	def restart
-		players = []
+		@players = []
 	end
 	
 end

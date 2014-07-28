@@ -18,7 +18,6 @@ configure :production do
 GAME = Game.new
   
   get '/' do
-    GAME.restart
     erb :index
   end
 
@@ -61,12 +60,6 @@ GAME = Game.new
     redirect to '/waiting_room' if GAME.waiting_for?(GAME.player1) 
     redirect to '/outcome' if GAME.both_picked?
     
-    # redirect to '/outcome' if GAME.both_picked?
-    # puts GAME.both_picked?
-    # redirect to '/waiting_room' if !GAME.both_picked?
-    #redirect to '/waiting_room' if !GAME.enough_players?
-
-
   end
 
   post '/game' do
@@ -81,19 +74,10 @@ GAME = Game.new
     erb :outcome
   end
 
-=begin
-  def generate_computer
-  	choice = ["Rock","Paper","Scissors"].sample
-  	comp = Player.new("computer")
-  	comp.picks = choice
-  	comp
+   get '/restart' do
+    erb :restart
+    redirect to '/'
   end
-
-  redirect to '/play' if GAME.enough_players?
-    erb :outcome if GAME.both_played?
-    redirect to '/waiting_room'
-
-=end
 
 
   # start the server if ruby file executed directly

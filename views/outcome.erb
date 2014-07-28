@@ -6,5 +6,5 @@ RESULTS:
  <h1> <%= GAME.winner.name %> won with <%= GAME.winner.pick %> and <%= GAME.looser.name %> lost with <%= GAME.looser.pick %></h1>
 <% else %>
  <h1> <%= GAME.winner.name %> won with <%= GAME.winner.pick %> and <%= GAME.looser.name %> lost with <%= GAME.looser.pick %></h1><%end%>
-<a href="/">
-<% GAME.restart %> Restart</a>
+<a href="/restart">
+ Restart</a>
