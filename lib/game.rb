@@ -50,4 +50,7 @@ class Game
 	def normalize(pick)
 		pick.downcase.to_sym
 	end
+	def restart
+		players = []
+	end
 end
