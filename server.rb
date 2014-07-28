@@ -18,6 +18,7 @@ configure :production do
 GAME = Game.new
   
   get '/' do
+    GAME.restart
     erb :index
   end
 
@@ -77,7 +78,6 @@ GAME = Game.new
   end
 
   get '/outcome' do
-
     erb :outcome
   end
 
