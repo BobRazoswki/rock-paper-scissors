@@ -1,5 +1,70 @@
 <html>
+
+	<head>
+		<link href="/style.css" rel="stylesheet">
+	</head>
+
 <body>
-<%= yield %>
+
+	<header>
+			<nav>
+				<div class="position">
+					<li>
+					  <ul class="ul1 ulposition"><a href="/new-game">New Game</a></ul>
+					  <ul class="logo"><a href="/"> Rock, Paper, Scissors !</a> </ul>
+					  <ul class="ulposition"><a href="http://en.wikipedia.org/wiki/Rock-paper-scissors">Story</a></ul>
+					</li>
+
+					 <select> 
+
+    <option value="" selected="selected">Select</option> 
+    
+    <option value="/new-game">Home</option> 
+    <option value="/">Books</option> 
+    <option value="http://en.wikipedia.org/wiki/Rock-paper-scissors">Blog</option> 
+ 
+  </select> 
+
+				</div>
+			</nav> 
+	</header>
+
+	<section>
+		<%= yield %>
+	</section>
+
+	<footer>
+		<div class="footer"></div>
+	</footer>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<script type="text/javascript">
+		// Create the dropdown base
+$("<select />").appendTo("nav");
+
+// Create default option "Go to..."
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Go to..."
+}).appendTo("nav select");
+
+// Populate dropdown with menu items
+$("nav a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("nav select");
+});
+
+$("nav select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+
+	</script>
+
 </body>
+
 </html>

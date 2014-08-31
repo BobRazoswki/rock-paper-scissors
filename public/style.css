@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'dk_crayon_crumbleregular';
+    src: url('/font/dk_crayon_crumble-webfont.eot');
+    src: url('/font/dk_crayon_crumble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/dk_crayon_crumble-webfont.woff') format('woff'),
+         url('/font/dk_crayon_crumble-webfont.ttf') format('truetype'),
+         url('/font/dk_crayon_crumble-webfont.svg#dk_crayon_crumbleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body {
+	height: 1000px;
+	background: url('/images/paper_texture_07.png');
+	font-family: dk_crayon_crumbleregular;
+	font-size: 2em;
+}
+
+a:visited {
+color: black;
+}
+
+/*
+
+
+*/
+
+header {
+	height: 100px;
+	width: 100%;
+}
+
+
+.logo {
+	font-family: dk_crayon_crumbleregular;
+	font-size: 54px;
+transition:All 1s ease;
+-webkit-transition:All 1s ease;
+-moz-transition:All 1s ease;
+-o-transition:All 1s ease;
+transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+}
+.logo:hover{
+transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
+-webkit-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
+-moz-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
+-o-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
+-ms-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
+}
+
+nav li {
+position: fixed;
+z-index: 100;
+border-bottom: 1px;
+list-style-type: none;
+border-bottom: 1px solid black;
+-webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+width: 100%;
+padding-left: 44px;
+top: 0px;
+margin-top: -45px;
+margin-bottom: -100px;
+height: 128px;
+background: url('/images/paper_texture_07.png');
+}
+
+.position {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+nav select {
+  display: none;
+}
+
+
+nav li ul {
+	display: inline-block;
+}
+
+nav li a {
+	display:block;
+	text-decoration: none;
+}
+
+.ul1 {
+	margin-left: -35px;
+}
+
+.ulposition {
+vertical-align: middle;
+height: 42px;
+}
+
+.border {
+	margin-top: 10px;
+	border-bottom: 0!important;
+	height: 1px!important;
+	width: 300%;
+	background: #50658e!important;
+	background-image: -webkit-linear-gradient(left, #ccc, #50658e, #ccc)!important;
+	background-image: -moz-linear-gradient(left, #ccc, #50658e, #ccc)!important;
+	background-image: -ms-linear-gradient(left, #ccc, #50658e, #ccc!important);
+	background-image: -o-linear-gradient(left, #ccc, #50658e, #ccc)!important;
+}
+
+/*
+
+
+*/
+
+.letsplay {
+text-align: center;
+}
+
+.letsplay img {
+width: 30%;
+}
+
+.letsplay h3 {
+font-family: dk_crayon_crumbleregular;
+font-size: 46px;
+margin-top: 10px;
+}
+
+
+section {
+	height: 100px;
+	width: 100%;
+}
+
+.new_player_form {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*
+
+
+*/
+
+
+form input {
+height: 60px;
+width: 280px;
+}
+
+.my_name {
+height: 100px;
+width: 100px;
+z-index: 1;
+background: ('/images/hello_my_name_is.jpg') no-repeat;
+}
+
+.form_new_player {
+	z-index: 3;
+}
+
+.play {
+text-align: center;
+}
+
+/*
+
+
+*/
+
+footer {
+	height: 100px;
+	width: 100px;
+}
+
+.waiting {
+text-align: center;
+}
+
+@media (max-width: 960px) {
+  nav ul     { display: none!important;   }
+  .position { display: none}
+nav select {
+display: block!important;
+height: 50px;
+width: 200px;
+margin-left: auto;
+margin-right: auto;
+}
+}

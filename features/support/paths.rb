@@ -12,7 +12,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-
+    when /waiting_room/
+      '/waiting_room'
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

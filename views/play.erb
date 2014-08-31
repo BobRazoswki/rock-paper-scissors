@@ -1,4 +1,4 @@
-<h1>Welcome <%= @player%></h1>
+<div class="play"><h1>Welcome <%= session[:player].name %></h1>
 
 <form action="/play" method="POST">
 	<button name="pick" value="Paper">Paper</button>
@@ -6,3 +6,4 @@
 	<button name="pick" value="Scissors">Scissors</button>
 	<input type="hidden" name="name" value=<%=@name%>>
 </form>
+</div>
